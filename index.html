@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc mừng năm mới</title>
+    <link rel="stylesheet" href="./styles.css">
+
+</head>
+
+<body>
+    <canvas id="cas"></canvas>
+    <div id="Merry" class="christmas-message">Chúc mừng năm mới</div>
+    <img class="tree-icon">
+    <audio id="audio" src="./tet.mp3"></audio>
+    <div class="container">
+        <button id="showButton">
+            Thân gửi bạn iu
+        </button>
+    </div>
+
+    <div id="guideInfo" class="hidden">
+        <button id="closeButton" class="close-btn">X</button>
+        <div class="card">
+            <div class="imgBox">
+                <div class="bark"></div>
+                <img src="image/anhtet.png" alt="line slow">
+                        <div id="text-img" style="visibility: hidden;">Hope you find someone who knows how to love you when you are sad 😉😉</div>
+
+            </div>
+            <div class="details">
+                <h4 class="color1">
+                    </h2>
+                    <h4 class="color2 margin">Chúc mừng năm mới!</h3>
+
+
+                        <pre>
+Chúc mừng năm mới. Chúc cho năm
+nay của bn thật sự rực rỡ, may 
+mắn và tràn đầy niềm vui. Mong
+rằng bn sẽ luôn xinh đẹp, tự tin
+và thu hút mọi ánh nhìn. Hãy giữ
+vững đam mê học hỏi, không ngừng
+nỗ lực để đạt được thành tích 
+xuất sắc trong mọi lĩnh vực, từ
+học tập cho đến công việc sau này.
+Chúc bn luôn khỏe mạnh,tràn đầy
+năng lượng và giữ được sự cân bằng
+trong cuộc sống, không lo lắng,
+không mệt mỏi.Mong bn luôn gặp được
+những người bạn tốt, những cơ hội
+mới,và mọi điều tốt đẹp nhất sẽ đến
+với bn. Chúc bm bn có một năm mới
+phát tài phát lộc, vạn sự như ý,
+công việc thuận lợi, gia đình luôn
+hạnh phúc. 🥰🥰🥰
+                        </pre>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <script>
+        document.body.addEventListener("click", function () {
+            var audio = document.getElementById("audio");
+            audio.play();
+        });
+
+        function getParam(name) {
+            const params = new URLSearchParams(window.location.search);
+            return params.get(name);
+        }
+
+        if (getParam('a') === 'b') {
+            document.getElementById('text-img').style.visibility = 'visible';
+        }
+
+    </script>
+</body>
+
+</html>
